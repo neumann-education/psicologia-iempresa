@@ -2,9 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3qdaz-mAdkTOOTsXBOD5nvkwgnVJ4P0ZjEQoKs3umFlw-CjWMuysNhGQgA_DYYEqTR966vNodw">
     <title>Redirigiendo...</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <script>
+        Swal.fire({
+            title: 'Información Importante',
+            html: `
+                <p>A tu correo llegará la confirmación de tu hora reservada. Una vez que nuestra psicóloga se contacte contigo, deberás mostrar tu reserva del correo.</p>
+            `,
+            icon: 'info',
+            confirmButtonText: 'Aceptar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3qdaz-mAdkTOOTsXBOD5nvkwgnVJ4P0ZjEQoKs3umFlw-CjWMuysNhGQgA_DYYEqTR966vNodw";
+            }
+        });
+    </script>
 </body>
 </html>
